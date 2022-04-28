@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Meta tags-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--less css links-->
+    <link rel="stylesheet/less" type="text/css" a href="Lessfile.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="mustache.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+    
+    <!--Title for the page-->
+    <title>Furever Friends Adoptions</title>
+
+
+
+  </head>
+  <body>
+    <div class="container p-5 my-5 bg-dark text-white">
+
+    <!--Big title heading-->
+      <div class="text-center">
+        <h1 class="display-1">Furever Friends Pet Adoption</h1>
+  
+      </div>
+    </div>
+    
+    
+    <!--Navagation Tabs-->
+
+      <div class="container">
+        <ul class="nav nav-tabs nav-justified">
+          <li class="nav-item">
+            <a class="nav-link active" href="DogsPage.html">Dogs</a>
+          </li>
+        <br>
+        <br>
+          <li class="nav-item">
+            <a class="nav-link active" href="CatsPage.html">Cats</a>
+          </li>
+        <br>
+        <br>
+          <li class="nav-item">
+            <a class="nav-link active" href="BirdsPage.html">Birds</a>
+          </li>
+        <br>
+        <br>
+          <li class="nav-item">
+            <a class="nav-link active" href="adoptform.html">Adoption Form</a>
+          </li>
+        <br>
+        <br>
+          <li class="nav-item">
+            <a class="nav-link active" href="ContactUs.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col text-center bg-green">
+        <p>Welcome to Furever Friends Adoptions! Are you ready to find your best furry friend?</p>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <section bg-dark>
+      <div class="col text-center">
+        <img src="images/animalpic.jpg">
+        <br>
+        <br>
+        <img src="images/homephoto2.jpg">
+        <br>
+        <br>
+        <button type="button" onclick="adoptPrice()">Click for Adoption Prices</button>
+      </div>
+    <br>
+    <br>
+
+    
+    </section>
+
+    <br> <!--Javascript button to tell us the price of a type of animal-->
+      
+        <script>
+            const CAT_COST = 25;
+            const DOG_COST = 50;
+            const BIRD_COST = 25;
+
+            function adoptPrice() {
+
+                const animal = prompt('What animal are you adopting? Cat, Dog, or Bird' );
+                if ((animal === 'cat') || (animal === 'Cat')) {
+                    cost = CAT_COST;
+                }
+                if ((animal === 'dog') || (animal === 'Dog')) {
+                    cost = DOG_COST;
+                }
+                if ((animal === 'bird') || (animal === 'Bird')) {
+                    cost = BIRD_COST;
+                }
+            
+                alert('Your adoption fee is: $' + cost)
+            }
+
+            
+
+        </script>
+  </main>
+    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
